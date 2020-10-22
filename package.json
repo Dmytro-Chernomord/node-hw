@@ -1,0 +1,28 @@
+{
+  "name": "01-node-basics",
+  "version": "1.0.0",
+  "description": "first homework",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmytro-Chernomord/node-hw.git"
+  },
+  "author": "Dmytro Chernomord tschernomord@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmytro-Chernomord/node-hw/issues"
+  },
+  "homepage": "https://github.com/Dmytro-Chernomord/node-hw#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "nanoid": "^3.1.13",
+    "yargs": "^16.1.0"
+  }
+}
