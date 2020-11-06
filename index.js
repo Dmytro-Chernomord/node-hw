@@ -1,4 +1,4 @@
-console.log('hi1');
+
 const contacts = require('./contacts.js')
 const argv = require('yargs').argv;
 function invokeAction({ action, id, name, email, phone }) {
