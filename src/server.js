@@ -1,6 +1,7 @@
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const { contactsRouter } = require('./contacts/contact.router');
 require('dotenv').config({ path: path.join(__dirname, "../.env") });
 exports.CrudServer = class {
     constructor() {
@@ -21,7 +22,7 @@ exports.CrudServer = class {
         this.app.use(morgan('tiny'))
     }
     initRoutes() {
-
+        this.app.use('/contacts', contactsRouter)
     }
     initErrorHandler() {
         this.app.use((err, req, res, next) => {

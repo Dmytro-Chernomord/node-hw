@@ -26,7 +26,7 @@ function removeContact(contactId) {
         })
     })
 }
-function addContact(name, email, phone) {
+function addContact({ name, email, phone }) {
     const id = nanoid.nanoid(3);
     const newContact = {
         id,
