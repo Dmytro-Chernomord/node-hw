@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path')
 const nanoid = require('nanoid')
-const contactsPath = path.join(__dirname, './db/contacts.json')
+const contactsPath = path.join(__dirname, '../db/contacts.json')
 function listContacts() {
     fs.readFile(contactsPath, "utf-8", (err, data) => {
         console.table(JSON.parse(data));
