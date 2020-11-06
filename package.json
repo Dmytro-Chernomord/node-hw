@@ -18,10 +18,12 @@
     "url": "https://github.com/Dmytro-Chernomord/node-hw/issues"
   },
   "homepage": "https://github.com/Dmytro-Chernomord/node-hw#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "morgan": "^1.10.0",
-    "nodemon": "^2.0.6"
+    "morgan": "^1.10.0"
   }
 }
