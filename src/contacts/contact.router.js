@@ -2,7 +2,7 @@ const { Router } = require('express');
 // const { getContactById } = require('../contacts');
 const { validate } = require('../helpers/validate.middleware');
 const { createContact, getContactsList, getContactById, deleteContactReq, patchContact } = require('./contacts.controller');
-const { createContactSchema, patchContactSchema } = require('./user.schemes');
+const { createContactSchema, patchContactSchema } = require('./contacts.schemes');
 
 
 const router = Router();

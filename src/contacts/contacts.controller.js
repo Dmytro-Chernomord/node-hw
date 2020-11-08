@@ -1,5 +1,5 @@
 // const id = require('nanoid')
-const contacts = require('../contacts')
+const contacts = require('./contacts.model')
 
 // lodash
 // const _ = require('lodash')
