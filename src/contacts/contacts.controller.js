@@ -1,10 +1,4 @@
-// const id = require('nanoid')
 const contacts = require('./contacts.model')
-
-// lodash
-// const _ = require('lodash')
-// _.omit({}, 'password')
-
 exports.createContact = async (req, res, next) => {
     try {
         await contacts.addContact(req.body)
@@ -13,7 +7,6 @@ exports.createContact = async (req, res, next) => {
         next(error)
     }
 }
-
 exports.getContactsList = async (req, res, next) => {
     try {
         let list = await contacts.listContacts()
@@ -25,10 +18,8 @@ exports.getContactsList = async (req, res, next) => {
         next(error)
     }
 }
-
 exports.getContactById = async (req, res, next) => {
     try {
-
         let contact = await contacts.getContactById(req.params.id)
         if (contact.length === 0) {
             return res.status(400).send('{ "message": "Not found" }')
@@ -38,11 +29,8 @@ exports.getContactById = async (req, res, next) => {
         next(error)
     }
 }
-
-
 exports.deleteContactReq = async (req, res, next) => {
     try {
-
         let contact = await contacts.getContactById(req.params.id)
         if (contact.length === 0) {
             return res.status(400).send('{ "message": "Not found" }')
@@ -53,10 +41,8 @@ exports.deleteContactReq = async (req, res, next) => {
         next(error)
     }
 }
-
 exports.patchContact = async (req, res, next) => {
     try {
-
         let contact = await contacts.getContactById(req.params.id)
         if (contact.length === 0) {
             return res.status(400).send('{ "message": "Not found" }')

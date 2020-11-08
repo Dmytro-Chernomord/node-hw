@@ -52,7 +52,6 @@ async function updateContact(contactId, data) {
         return parseData[index]
     }
 }
-
 module.exports = {
     getContactById,
     removeContact, addContact, listContacts, updateContact
