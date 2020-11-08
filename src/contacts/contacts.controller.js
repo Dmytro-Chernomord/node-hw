@@ -30,7 +30,6 @@ exports.getContactById = async (req, res, next) => {
     try {
 
         let contact = await contacts.getContactById(req.params.id)
-        console.log(contact);
         if (contact.length === 0) {
             return res.status(400).send('{ "message": "Not found" }')
         }
