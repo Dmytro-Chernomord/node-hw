@@ -1,0 +1,33 @@
+{
+  "name": "02-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dmytro-Chernomord/node-hw.git"
+  },
+  "author": "Dmytro Chernomord",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dmytro-Chernomord/node-hw/issues"
+  },
+  "homepage": "https://github.com/Dmytro-Chernomord/node-hw#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "joi": "^17.3.0",
+    "morgan": "^1.10.0",
+    "nanoid": "^3.1.13",
+    "yargs": "^16.1.0"
+  }
+}
