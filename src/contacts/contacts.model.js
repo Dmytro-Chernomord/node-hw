@@ -38,6 +38,7 @@ async function addContact({ name, email, phone }) {
             }
         })
     })
+    return newContact
 }
 async function updateContact(contactId, data) {
     const contact = await fsp.readFile(contactsPath, "utf-8")

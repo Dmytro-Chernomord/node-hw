@@ -1,8 +1,8 @@
 const contacts = require('./contacts.model')
 exports.createContact = async (req, res, next) => {
     try {
-        await contacts.addContact(req.body)
-        return res.status(201).send(req.body)
+        const newContact = await contacts.addContact(req.body)
+        return res.status(201).send(newContact)
     } catch (error) {
         next(error)
     }
