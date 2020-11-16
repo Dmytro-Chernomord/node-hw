@@ -20,6 +20,7 @@ exports.CrudServer = class {
     }
     initServer() {
         this.app = express()
+        this.app.use("/images", express.static(__dirname + '/public/images'))
     }
     async initDataBase() {
         try {
@@ -27,7 +28,8 @@ exports.CrudServer = class {
                 {
                     useNewUrlParser: true,
                     useUnifiedTopology: true,
-                    useFindAndModify: false
+                    useFindAndModify: false,
+                    useCreateIndex: true
                 })
             console.log('Database connection successful');
         } catch (error) {
