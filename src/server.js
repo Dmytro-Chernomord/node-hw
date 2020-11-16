@@ -27,7 +27,8 @@ exports.CrudServer = class {
                 {
                     useNewUrlParser: true,
                     useUnifiedTopology: true,
-                    useFindAndModify: false
+                    useFindAndModify: false,
+                    useCreateIndex: true
                 })
             console.log('Database connection successful');
         } catch (error) {
