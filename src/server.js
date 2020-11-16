@@ -43,7 +43,6 @@ exports.CrudServer = class {
         this.app.use('/contacts', contactsRouter)
         this.app.use('/auth', routerAuth)
         this.app.use('/users', userRouter)
-
     }
     initErrorHandler() {
         this.app.use((err, req, res, next) => {
