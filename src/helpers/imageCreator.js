@@ -3,9 +3,8 @@ const multer = require("multer");
 const id = require('nanoid')
 
 const storage = multer.diskStorage({
-    destination: "public/images",
+    destination: "src/public/images",
     filename: function (req, file, cb) {
-        console.log('file', file);
         const ext = path.parse(file.originalname).ext;
         cb(null, id.nanoid(3) + ext);
     },

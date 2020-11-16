@@ -14,9 +14,7 @@ exports.avatar = async (req, res, next) => {
 
     try {
         const newImagePath = `http://localhost:3000/images/${file.filename}`;
-
         const updatedImage = await UserModel.findByIdAndUpdate(user._id, { avatarURL: newImagePath, }, { new: true });
-        console.log(req.file, 'req');
         return res.status(200).send({ avatarURL: updatedImage.avatarURL })
     } catch (error) {
         throw new Unauthorized('Not authorized')
