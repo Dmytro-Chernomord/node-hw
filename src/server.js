@@ -2,7 +2,9 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const { contactsRouter } = require('./contacts/contact.router');
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const { routerAuth } = require('./auth/auth.router');
+const { userRouter } = require('./user/users.router');
 require('dotenv').config({ path: path.join(__dirname, "../.env") });
 exports.CrudServer = class {
     constructor() {
@@ -39,6 +41,9 @@ exports.CrudServer = class {
     }
     initRoutes() {
         this.app.use('/contacts', contactsRouter)
+        this.app.use('/auth', routerAuth)
+        this.app.use('/users', userRouter)
+
     }
     initErrorHandler() {
         this.app.use((err, req, res, next) => {
