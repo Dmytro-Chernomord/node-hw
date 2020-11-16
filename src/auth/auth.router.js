@@ -10,5 +10,4 @@ router.post('/register', validate(createUserSchema), register)
 router.post('/login', validate(loginSchema), login)
 router.post('/logout', authorize, logout)
 
-
 exports.routerAuth = router
